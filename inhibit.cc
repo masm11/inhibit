@@ -21,7 +21,7 @@ static int dell_monitor_connected(void)
 static void inhibit(int do_inhibit)
 {
     static unsigned int cookie = 0;
-    QDBusInterface *iface = new QDBusInterface(
+    static QDBusInterface *iface = new QDBusInterface(
 	    "org.freedesktop.ScreenSaver",
 	    "/ScreenSaver",
 	    "org.freedesktop.ScreenSaver",
